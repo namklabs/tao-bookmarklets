@@ -1,0 +1,9 @@
+*~
+~*
+Thumbs.db
+*thumbs.db
+.DS_Store
+*.swp
+desktop.ini
+_resources
+*.psd
