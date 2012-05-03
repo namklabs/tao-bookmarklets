@@ -32,6 +32,20 @@
 
   function initMyBookmarklet() {
     (window.myBookmarklet = function() {
+
+    var h;
+    var hArray = [];
+    var id;
+    $("a[href*=editmenuitem]").css({"background-color":"#59ff80"});
+    alert("Click the link you want to move.");
+    $(document).click(function(t){
+      h = t.target.href;
+      hArray = h.split('=');
+      id = hArray[hArray.length - 1];
+      window.open("/?id=273&item="+id,"taomoveitem");
+      return false;
+    });
+      
       // your JavaScript code goes here!
     })();
   }

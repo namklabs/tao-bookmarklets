@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Tao Move Item Bookmarklet</title>
+</head>
+<body>
+  <div id="main"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="/image/cache/jquery-1.7.2.min.js"><\/script>')</script>
+<script>
+// need to pass the menu ID as well!
+
+var l = window.location.href;
+var la = l.split("=");
+var lid = la[ la.length-1 ];
+
+$("#main").html('<h1>Move item # '+lid+'</h1><input type="button" value="Move Down" id="down"><input type="button" value="Move Up" id="up">');
+
+$("#down").click(function(){
+  window.opener.location.href = "/taoCMS/menu/move.php?menu_id=12&menuitem_id="+lid+"&action=demote";
+});
+
+$("#up").click(function(){
+  window.opener.location.href = "/taoCMS/menu/move.php?menu_id=12&menuitem_id="+lid+"&action=promote";
+});
+</script>
+</body>
