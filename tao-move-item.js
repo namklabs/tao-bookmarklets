@@ -42,7 +42,7 @@
       h = t.target.href;
       hArray = h.split('=');
       id = hArray[hArray.length - 1];
-      window.open("/?id=273&item="+id,"taomoveitem");
+      window.open("/?id=273&item="+id,"taomoveitem"); //the ?id is the page that you added tao-move-item.html to as the template
       return false;
     });
       
