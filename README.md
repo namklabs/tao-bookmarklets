@@ -8,6 +8,8 @@ I think to start off I will have the master branch contain the finished bookmark
 
 - bookmarklet.js - blank template
 - tao-select-search.js - makes select-dropdowns searchable by text input
+- tao-move-item.js - opens a new window to let you move an item in a list up or down quickly
+- tao-webpage-id.js - displays the id of each webpage in the webpage module page list
 
 ###Credits
 
