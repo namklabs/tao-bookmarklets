@@ -45,8 +45,6 @@
       window.open("/?id=273&item="+id,"taomoveitem"); //the ?id is the page that you added tao-move-item.html to as the template
       return false;
     });
-      
-      // your JavaScript code goes here!
     })();
   }
 

@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <title>Tao Move Item Bookmarklet</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script><script type="text/javascript">
+!window.jQuery && document.write('<script src="/image/cache/jquery-1.7.2.min.js"><\/script>')
+</script><script type="text/javascript">
+function getUrlVars(b) {
+    var d = {};
+    var c = b.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (a, e, f) {
+        d[e] = f
+    });
+    return d
+}
+var l = window.location.href;
+var id = getUrlVars(l)["item"];
+var type = getUrlVars(l)["type"];
+var fid = getUrlVars(l)["fid"];
+var z = getUrlVars(l)["z"];
+$(document).ready(function () {
+    $("#up").click(function () {
+        if (type === "menu") {
+            window.opener.location.href = "/taoCMS/menu/move.php?menu_id=" + fid + "&menuitem_id=" + id + "&action=promote";
+        } else if (type === "webform") {
+            window.opener.location.href = "taoCMS/form/manageopts.php?zorder=" + z + "&target=" + id + "&move=up&form_id=" + fid;
+        }
+        z--;
+    });
+    $("#down").click(function () {
+        if (type === "menu") {
+            window.opener.location.href = "/taoCMS/menu/move.php?menu_id=" + fid + "&menuitem_id=" + id + "&action=demote";
+        } else if (type === "webform") {
+            window.opener.location.href = "taoCMS/form/manageopts.php?zorder=" + z + "&target=" + id + "&move=down&form_id=" + fid;
+        }
+        z++;
+    });
+});
+</script>
+   </head>
+   <body>
+      <!-- this template is to be added to the tao templates and then added to a single page in the webpages module. 
+that page's id needs to be referenced in tao-move-item.js -->
+      <p><input id="up" type="button" value="Move Up" /> <input id="down" type="button" value="Move Down" /></p>
+   </body>
+</html>

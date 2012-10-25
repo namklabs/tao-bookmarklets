@@ -2,16 +2,22 @@
 This is a collection of jQuery-powered bookmarklets for the TaoCMS. They assist in many of the day-to-day tasks that can be cumbersome for developers who perform them many times over.
 
 ##Architecture
-I think to start off I will have the master branch contain the finished bookmarks and the empty bookmark template. Other branches will be used for developing individual functions. Let's see how that goes.
+Each bookmarklet has its own folder. Some bookmarklets require supporting files.  
 
-##Bookmarklet List
+Each bookmarklet will have an instructional text file to accompany it called INSTRUCTIONS.txt  
 
-- bookmarklet.js - blank template
-- tao-select-search.js - makes select-dropdowns searchable by text input
-- tao-move-item.js - opens a new window to let you move an item in a list up or down quickly
-- tao-webpage-id.js - displays the id of each webpage in the webpage module page list
+The *.min.js version of the Javascript File has already been compressed for you.
+
+##Bookmarklet Folders
+
+- _new bookmarklet - blank template for new bookmarklet
+- select search - Looking for a parent page in a sea of dropdown options? This makes every `<SELECT>` on the page searchable by text input.
+- move nav link - Need to move a link in a navigation menu a long ways? This creates a pop up window from which you can reorder links very quickly.
+- move webform field - Need to move a webform field to the top of the list? This creates a pop up window from which you can reorder fields very quickly.
+- webpage id - Need the ID of a page in the Webpage module? This displays the id of each webpage in the webpage module page list.
 
 ###Credits
 
 - http://coding.smashingmagazine.com/2010/05/23/make-your-own-bookmarklets-with-jquery/
 - http://jscompress.com/
+- Jaden Van Eckhout (move webform field)
