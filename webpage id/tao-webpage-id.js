@@ -25,7 +25,7 @@
       $.each( $("table.main-border table tr td a[href^='editor.php?wpid=']").not(".icon"), function(){
         var link = $(this).attr("href");
         var id = /\d{1,10}$/.exec(link);
-        $(this).parent().after("<td>" + id + "</td>");
+        $(this).parent().after("<td><a target=\"_blank\" href=\"/?id=" + id + "\">" + id + "</a></td>");
       });
     })();
   }
